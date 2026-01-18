@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation & Déploiement - Groupe 110</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="logo.jpg" alt="Logo" width="45" height="45" class="navbar-logo me-3">
+            <div class="d-flex flex-column" style="line-height: 1.2;">
+                <span>Projet S1.03</span>
+                <span class="small opacity-75" style="font-size: 0.8rem;">110 Binôme 4</span>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="navbar-nav align-items-center">
+                <a class="nav-link mx-3" href="index.html">Home</a>
+                <a class="nav-link mx-3" href="Etude.html">Théorie</a>
+                <a class="nav-link mx-3" href="installation.html">Installation</a>
+                <a class="nav-link mx-3" href="administration.html">Administration</a>
+                <a class="nav-link mx-3" href="gestion.html">Gestion Projet</a>
+                <a class="nav-link mx-3" href="English.html">English</a>
+            </div>
+        </div>
+        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle ms-lg-3"><i class="bi bi-sun-fill"></i></button>
+    </div>
+</nav>
+
+<main class="container my-5 flex-grow-1">
+    <header class="header-gradient text-center p-5 shadow-lg">
+        <h1 class="display-4 fw-bold">Installation & Déploiement</h1>
+        <p class="lead opacity-75">Processus de création de la machine virtuelle et installation d'Ubuntu</p>
+    </header>
+
+    <section class="mb-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h2 class="border-bottom pb-2 mb-4">1. Création de la VM</h2>
+                <div class="custom-card border-start border-5 border-primary">
+                    <p class="text-body-secondary">Dans VirtualBox, nous initialisons une nouvelle machine virtuelle :</p>
+                    <ul class="list-unstyled text-body-secondary">
+                        <li class="mb-2"><i class="bi bi-tag-fill text-primary me-2"></i><strong>Nom :</strong> Ubuntu (pour identifier la distribution)</li>
+                        <li class="mb-2"><i class="bi bi-disc-fill text-primary me-2"></i><strong>Image ISO :</strong> Sélection de <code>ubuntu-24.04.3-desktop-amd64.iso</code></li>
+                        <li class="mb-2"><i class="bi bi-cpu text-primary me-2"></i><strong>Type :</strong> Linux / Ubuntu (64-bit)</li>
+                    </ul>
+                    <div class="p-3 bg-info bg-opacity-10 border border-info rounded text-info small">
+                        <strong>Note :</strong> L'option "Skip unattended install" est cochée pour maîtriser manuellement chaque étape du partitionnement.
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="iso.png" class="img-preview" alt="Création VM">
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">4. Tutoriel Vidéo : Processus d'Installation</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="custom-card bg-black border-secondary">
+                    <video controls width="100%" class="rounded-3 shadow">
+                        <source src="enregistrement.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+                    </video>
+                    <div class="mt-3 text-center">
+                        <p class="text-body-secondary small">
+                            <i class="bi bi-info-circle me-2"></i>
+                            Cette démonstration montre la création de la VM, le partitionnement et le premier démarrage d'Ubuntu Desktop.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <div class="row g-5 align-items-center flex-row-reverse">
+            <div class="col-lg-6">
+                <h2 class="text-end border-bottom pb-2 mb-4">2. Allocation des Ressources</h2>
+                <div class="custom-card border-end border-5 border-warning text-end">
+                    <p class="text-body-secondary">Afin de supporter l'environnement GNOME et nos outils de développement, nous avons alloué des ressources conséquentes :</p>
+                    <div class="mb-3">
+                        <h5 class="text-warning fw-bold">Mémoire RAM : 8192 MB (8 Go)</h5>
+                        <p class="small text-body-secondary">Indispensable pour la fluidité de l'interface graphique et l'exécution simultanée du serveur Apache.</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5 class="text-warning fw-bold">Processeurs (CPU) : 4 cœurs</h5>
+                        <p class="small text-body-secondary">Permet une gestion efficace du multitâche sans ralentir la machine hôte.</p>
+                    </div>
+                    <div>
+                        <h5 class="text-warning fw-bold">Disque Dur : 30 Go</h5>
+                        <p class="small text-body-secondary">Stockage en <strong>allocation dynamique</strong> pour optimiser l'espace sur l'hôte.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="ram et coeur.png" class="img-preview" alt="Allocation Ressources">
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">3. Finalisation du Déploiement</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-6">
+                <div class="custom-card h-100">
+                    <i class="bi bi-hdd-network text-info" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">Configuration NAT</h5>
+                    <p class="text-body-secondary small">Le réseau est configuré en mode NAT avec redirection de port (8080 -> 80) pour l'accès web externe.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-card h-100">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                    <h5 class="mt-3">Système Prêt</h5>
+                    <p class="text-body-secondary small">Après l'installation, le système est prêt pour la phase d'administration des comptes et services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div class="container mb-5">
+    <div class="d-flex justify-content-between align-items-center pt-4 border-top">
+        <a href="Etude.html" class="btn btn-outline-secondary rounded-pill px-4"><i class="bi bi-arrow-left me-2"></i> Théorie</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-nav-action btn-gradient shadow"><i class="bi bi-arrow-up"></i></button>
+        <a href="administration.html" class="btn btn-gradient rounded-pill px-4 shadow-sm">Suivant <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+</div>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAÉ S1.03 - Rapport Binôme 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="logo.jpg" alt="Logo" width="45" height="45" class="navbar-logo me-3">
+            <div class="d-flex flex-column" style="line-height: 1.2;">
+                <span>Projet S1.03</span>
+                <span class="small opacity-75" style="font-size: 0.8rem;">110 Binôme 4</span>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="navbar-nav align-items-center">
+                <a class="nav-link active mx-3" href="index.html">Home</a>
+                <a class="nav-link mx-3" href="Etude.html">Théorie</a>
+                <a class="nav-link mx-3" href="installation.html">Installation</a>
+                <a class="nav-link mx-3" href="administration.html">Administration</a>
+                <a class="nav-link mx-3" href="gestion.html">Gestion Projet</a>
+                <a class="nav-link mx-3" href="English.html">English</a>
+            </div>
+        </div>
+        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle ms-lg-3"><i class="bi bi-sun-fill"></i></button>
+    </div>
+</nav>
+
+<main class="container my-5 flex-grow-1">
+
+    <header class="header-gradient text-center p-5 shadow-lg">
+        <h1 class="display-4 fw-bold mb-3">Installation d'un poste de développement</h1>
+        <p class="fs-4 opacity-75 mb-5">Rapport technique de la SAÉ S1.03 - Groupe Gr110 / Binôme 04 composé de :</p>
+
+        <div class="row justify-content-center g-3 mt-4">
+            <div class="col-md-3">
+                <div class="p-3 bg-white bg-opacity-10 rounded-3 text-white team-card">
+                    <p class="mb-0 fw-bold fs-5">Amine</p>
+                    <small class="opacity-75">Laghouane</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 bg-white bg-opacity-10 rounded-3 text-white team-card">
+                    <p class="mb-0 fw-bold fs-5">Mohamed</p>
+                    <small class="opacity-75">Nahed</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-3 bg-white bg-opacity-10 rounded-3 text-white team-card">
+                    <p class="mb-0 fw-bold fs-5">Mohamed</p>
+                    <small class="opacity-75">Toumi</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="installation.html" class="btn btn-light rounded-pill px-5 py-3 fw-bold shadow-sm text-primary">
+                Voir le tutoriel d'installation
+            </a>
+        </div>
+    </header>
+
+    <section class="row g-5 align-items-center">
+        <div class="col-12">
+            <div class="custom-card border-start border-4 border-info">
+                <h2 class="h4 text-info fw-bold mb-3">Objectif de la mission</h2>
+                <p class="lead fs-6 text-body-secondary fst-italic">
+                    "Le but de cette SAÉ est dans un premier temps de s’initier à la technique de virtualisation
+                    en installant un environnement et en créant une machine virtuelle. Dans un second temps,
+                    il s’agit d’installer un serveur web et de l’utiliser pour mettre en ligne ce rapport."
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="custom-card h-100">
+                <h3 class="h4 mb-4 fw-bold">Configuration Technique</h3>
+                <ul class="list-unstyled text-body-secondary">
+                    <li class="mb-3">
+                        <strong class="text-info"><i class="bi bi-laptop me-2"></i>VM :</strong> Ubuntu Server 22.04 LTS
+                    </li>
+                    <li class="mb-3">
+                        <strong class="text-info"><i class="bi bi-cpu me-2"></i>Ressources :</strong> 4 Go RAM | 30 Go Disque
+                    </li>
+                    <li class="mb-3">
+                        <strong class="text-info"><i class="bi bi-router me-2"></i>Réseau :</strong> NAT avec redirection (8080/2222)
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="reseau.png" class="img-preview" alt="Capture redirection de ports">
+            <p class="small text-muted mt-2">Preuve de la configuration réseau NAT</p>
+        </div>
+    </section>
+
+</main>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

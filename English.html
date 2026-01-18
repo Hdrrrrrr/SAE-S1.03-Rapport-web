@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Tutorial - Groupe 110</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="logo.jpg" alt="Logo" width="45" height="45" class="navbar-logo me-3">
+            <div class="d-flex flex-column" style="line-height: 1.2;">
+                <span>Projet S1.03</span>
+                <span class="small opacity-75" style="font-size: 0.8rem;">110 Binôme 4</span>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="navbar-nav align-items-center">
+                <a class="nav-link mx-3" href="index.html">Home</a>
+                <a class="nav-link mx-3" href="Etude.html">Théorie</a>
+                <a class="nav-link mx-3" href="installation.html">Installation</a>
+                <a class="nav-link mx-3" href="administration.html">Administration</a>
+                <a class="nav-link mx-3" href="gestion.html">Gestion Projet</a>
+                <a class="nav-link mx-3" href="English.html">English</a>
+            </div>
+        </div>
+        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle ms-lg-3"><i class="bi bi-sun-fill"></i></button>
+    </div>
+</nav>
+
+<main class="container my-5 flex-grow-1">
+
+    <header class="header-gradient text-center p-5 shadow-lg">
+        <h1 class="display-4 fw-bold">Technical Documentation</h1>
+        <p class="lead opacity-75">Video Guide: Hardware, OS and Virtualization Principles</p>
+    </header>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">1. Video Tutorial</h2>
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="custom-card border-start border-5 border-primary h-100">
+                    <h4 class="text-primary mb-3"><i class="bi bi-play-circle-fill me-2"></i>How to Setup a VM</h4>
+                    <p class="text-body-secondary small mb-3">
+                        This tutorial covers the interaction between the Operating System and hardware, Hypervisor architectures, and the full setup process.
+                    </p>
+                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow">
+                        <video controls preload="metadata">
+                            <source src="VIDEO ANGLAIS AMINE LAGHOUANE.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="custom-card h-100">
+                    <h4 class="text-warning mb-3"><i class="bi bi-translate me-2"></i>Technical Glossary</h4>
+                    <ul class="list-unstyled text-body-secondary small">
+                        <li class="mb-2"><strong>Hardware:</strong> Computer components (CPU, RAM).</li>
+                        <li class="mb-2"><strong>Operating System:</strong> Software that manages hardware.</li>
+                        <li class="mb-2"><strong>Hypervisor:</strong> Software that creates and runs VMs.</li>
+                        <li class="mb-2"><strong>Host Machine:</strong> The physical computer.</li>
+                        <li class="mb-2"><strong>Guest OS:</strong> The virtualized system (Ubuntu).</li>
+                    </ul>
+                    <hr class="border-secondary">
+                    <div class="p-2 bg-black rounded border border-secondary text-center">
+                        <p class="text-info mb-0 small italic">"Virtualization is the key to scalable infrastructure."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">2. Video Overview & Key Takeaways</h2>
+        <div class="custom-card border-start border-5 border-info mb-4">
+            <p class="text-body-secondary small mb-0">
+                In this guide, we explore the core principles of computing. The tutorial covers system fundamentals,
+                defining what a computer is and how the OS controls hardware like CPU and RAM.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="custom-card h-100">
+                    <h5 class="text-primary small fw-bold">Hypervisor Architecture</h5>
+                    <p class="text-body-secondary small mb-0">Understanding Type 2 Hypervisors that act as a bridge between host and guest systems.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card h-100">
+                    <h5 class="text-success small fw-bold">Setup Process</h5>
+                    <p class="text-body-secondary small mb-0">A three-stage walkthrough: manager installation, hardware allocation, and Guest OS deployment.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="custom-card h-100">
+                    <h5 class="text-warning small fw-bold">Performance Trade-off</h5>
+                    <p class="text-body-secondary small mb-0">Evaluating flexibility versus resource-heavy requirements and potential system slowdowns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="container mb-5">
+    <div class="d-flex justify-content-between align-items-center pt-4 border-top">
+        <a href="administration.html" class="btn btn-outline-secondary rounded-pill px-4"><i class="bi bi-arrow-left me-2"></i> Previous</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-nav-action btn-gradient shadow"><i class="bi bi-arrow-up"></i></button>
+        <a href="index.html" class="btn btn-gradient rounded-pill px-4 shadow-sm">Home <i class="bi bi-house-door-fill ms-2"></i></a>
+    </div>
+</div>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

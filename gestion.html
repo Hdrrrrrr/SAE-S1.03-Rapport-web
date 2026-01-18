@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion de Projet - Groupe 110</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+      <img src="logo.jpg" alt="Logo" width="45" height="45" class="navbar-logo me-3">
+      <div class="d-flex flex-column" style="line-height: 1.2;">
+        <span>Projet S1.03</span>
+        <span class="small opacity-75" style="font-size: 0.8rem;">110 Binôme 4</span>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div class="navbar-nav align-items-center">
+        <a class="nav-link mx-3" href="index.html">Home</a>
+        <a class="nav-link mx-3" href="Etude.html">Théorie</a>
+        <a class="nav-link mx-3" href="installation.html">Installation</a>
+        <a class="nav-link mx-3" href="administration.html">Administration</a>
+        <a class="nav-link mx-3" href="gestion.html">Gestion Projet</a>
+        <a class="nav-link mx-3" href="English.html">English</a>
+      </div>
+    </div>
+    <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle ms-lg-3"><i class="bi bi-sun-fill"></i></button>
+  </div>
+</nav>
+
+<main class="container my-5 flex-grow-1">
+  <header class="header-gradient text-center p-5 shadow-lg">
+    <h1 class="display-4 fw-bold">Outils & Stack Technique</h1>
+    <p class="lead opacity-75">Les ressources utilisées pour ce projet</p>
+  </header>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="custom-card text-center">
+        <div class="mb-3 text-info"><i class="bi bi-palette-fill fs-1"></i></div>
+        <h3 class="h5 fw-bold">Canva</h3>
+        <p class="text-body-secondary small">Design graphique et maquettes des schémas.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="custom-card text-center">
+        <div class="mb-3" style="color: #6f42c1;"><i class="bi bi-bootstrap-fill fs-1"></i></div>
+        <h3 class="h5 fw-bold">Bootstrap 5</h3>
+        <p class="text-body-secondary small">Framework CSS pour le responsive et le mode sombre.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="custom-card text-center">
+        <div class="mb-3 text-warning"><i class="bi bi-code-square fs-1"></i></div>
+        <h3 class="h5 fw-bold">WebStorm</h3>
+        <p class="text-body-secondary small">IDE JetBrains utilisé pour le développement HTML/JS.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="custom-card text-center">
+        <div class="mb-3 text-success"><i class="bi bi-hdd-network-fill fs-1"></i></div>
+        <h3 class="h5 fw-bold">Machine Virtuelle</h3>
+        <p class="text-body-secondary small">Serveur Ubuntu 24.04 avec Apache2 et NAT.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="custom-card text-center">
+        <div class="mb-3" style="color: #5865F2;"><i class="bi bi-discord fs-1"></i></div>
+        <h3 class="h5 fw-bold">Discord</h3>
+        <p class="text-body-secondary small">Communication, partage d'écran et réunions.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="custom-card text-center">
+        <div class="mb-3 text-primary"><i class="bi bi-google fs-1"></i></div>
+        <h3 class="h5 fw-bold">Google Drive</h3>
+        <p class="text-body-secondary small">Stockage Cloud et partage des fichiers.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container mb-5">
+  <div class="d-flex justify-content-between align-items-center pt-4 border-top">
+    <a href="administration.html" class="btn btn-outline-secondary rounded-pill px-4"><i class="bi bi-arrow-left me-2"></i> Admin</a>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-nav-action btn-gradient shadow"><i class="bi bi-arrow-up"></i></button>
+    <a href="English.html" class="btn btn-gradient rounded-pill px-4 shadow-sm">English <i class="bi bi-arrow-right ms-2"></i></a>
+  </div>
+</div>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

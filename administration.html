@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Système - Groupe 110</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+            <img src="logo.jpg" alt="Logo" width="45" height="45" class="navbar-logo me-3">
+            <div class="d-flex flex-column" style="line-height: 1.2;">
+                <span>Projet S1.03</span>
+                <span class="small opacity-75" style="font-size: 0.8rem;">110 Binôme 4</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="navbar-nav align-items-center">
+                <a class="nav-link mx-3" href="index.html">Home</a>
+                <a class="nav-link mx-3" href="Etude.html">Théorie</a>
+                <a class="nav-link mx-3" href="installation.html">Installation</a>
+                <a class="nav-link active mx-3" href="administration.html">Administration</a>
+                <a class="nav-link mx-3" href="gestion.html">Gestion Projet</a>
+                <a class="nav-link mx-3" href="English.html">English</a>
+            </div>
+        </div>
+        <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle ms-lg-3"><i class="bi bi-sun-fill"></i></button>
+    </div>
+</nav>
+
+<main class="container my-5 flex-grow-1">
+    <header class="header-gradient text-center p-5 shadow-lg">
+        <h1 class="display-4 fw-bold">Administration du Système</h1>
+        <p class="lead opacity-75">Gestion des utilisateurs, personnalisation et services Web</p>
+    </header>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">1. Administration des Comptes et Identité</h2>
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="custom-card border-start border-5 border-primary mb-4">
+                    <h4 class="text-primary mb-3"><i class="bi bi-people-fill me-2"></i>Gestion du Groupe et des Binômes</h4>
+                    <p class="text-body-secondary small">
+                        L'organisation du travail collaboratif a nécessité la création d'un environnement partagé. Nous avons créé un groupe de travail nommé <strong>Binome4</strong> afin de centraliser les permissions.
+                        Ensuite, trois comptes utilisateurs (<code>Binome4_1</code>, <code>Binome4_2</code>, <code>Binome4_3</code>) ont été générés et affectés à ce groupe pour permettre à chaque membre du trio d'administrer le serveur avec ses propres identifiants.
+                    </p>
+                    <div class="bg-black p-2 rounded border border-secondary mt-2">
+                        <code class="text-info small">sudo groupadd Binome4</code><br>
+                        <code class="text-info small">sudo useradd -m -g Binome4 Binome4_1</code>
+                    </div>
+                </div>
+
+                <div class="custom-card border-start border-5 border-info">
+                    <h4 class="text-info mb-3"><i class="bi bi-terminal-fill me-2"></i>Personnalisation du Prompt</h4>
+                    <p class="text-body-secondary small">
+                        Pour une administration plus claire, nous avons modifié l'apparence du terminal via le fichier <code>.bashrc</code>. Le prompt a été configuré pour afficher explicitement notre identité de groupe : <code>[admin_gr110_binome4]</code>. Cela permet d'identifier instantanément la machine et l'utilisateur en cours lors des opérations en ligne de commande.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="custom-card h-100 d-flex flex-column justify-content-center text-center">
+                    <img src="changementdeprompt.png" class="img-preview mb-2" alt="Preuve Admin">
+                    <p class="text-body-secondary small mt-2"><i class="bi bi-camera-fill me-1"></i> Capture de preuve : Création des comptes et nouveau prompt personnalisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">2. Preuves de Bon Fonctionnement</h2>
+        <div class="custom-card border-start border-5 border-danger mb-4">
+            <p class="text-body-secondary mb-0">
+                L'administration d'un serveur web implique une vérification constante de la disponibilité des services. Pour valider notre installation, nous avons dû nous assurer que le démon <strong>Apache2</strong> répondait correctement aux requêtes système et qu'il était capable de délivrer du contenu HTML via le réseau local de la machine virtuelle.
+            </p>
+        </div>
+        <div class="row g-4 text-center">
+            <div class="col-md-6">
+                <div class="custom-card">
+                    <h5 class="text-danger mb-3"><i class="bi bi-check-all me-2"></i>Service Actif</h5>
+                    <img src="servapach.png" class="img-preview mb-2" alt="Status Apache">
+                    <p class="text-body-secondary small">Vérification du statut <strong>running</strong> via systemctl.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="custom-card">
+                    <h5 class="text-success mb-3"><i class="bi bi-globe me-2"></i>Rendu Localhost</h5>
+                    <img src="apachepage.png" class="img-preview mb-2" alt="Page Web">
+                    <p class="text-body-secondary small">Accès réussi à la page par défaut sur le port 8080.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="border-bottom pb-2 mb-4">3. Maintenance du Système</h2>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="custom-card border-start border-5 border-warning position-relative overflow-hidden">
+                    <i class="bi bi-shield-shaded position-absolute end-0 bottom-0 m-3 opacity-25" style="font-size: 4rem;"></i>
+                    <h4 class="text-warning fw-bold mb-3"><i class="bi bi-arrow-repeat me-2"></i>Mises à jour et Sécurité</h4>
+                    <p class="text-body-secondary small mb-3">
+                        L'administration d'Ubuntu implique la gestion régulière des paquets pour maintenir la stabilité du serveur Apache. Nous effectuons périodiquement la synchronisation des dépôts et la mise à niveau des logiciels installés pour corriger d'éventuelles failles de sécurité.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <code class="text-info bg-black p-2 rounded small">sudo apt update</code>
+                        <code class="text-info bg-black p-2 rounded small">sudo apt upgrade -y</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<div class="container mb-5">
+    <div class="d-flex justify-content-between align-items-center pt-4 border-top">
+        <a href="installation.html" class="btn btn-outline-secondary rounded-pill px-4"><i class="bi bi-arrow-left me-2"></i> Install</a>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-nav-action btn-gradient shadow"><i class="bi bi-arrow-up"></i></button>
+        <a href="gestion.html" class="btn btn-gradient rounded-pill px-4 shadow-sm">Gestion <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+</div>
+
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

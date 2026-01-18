@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bc08bd56-2eaf-479e-b0a3-f34702a4da76" name="Server-SAE">
+        <fileTransfer rootFolder="/var/www/html" accessType="SFTP" host="127.0.0.1" port="2222" sshConfigId="75a5fe6f-aa1a-4934-824d-09241c917d02" sshConfig="admin_gr110_binome4@127.0.0.1:2222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
